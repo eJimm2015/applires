@@ -4,50 +4,68 @@ import utils.StatutEnchere;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Enchere implements Serializable {
 
-    private String id, titre;
+    private String id, titre, proprietaire;
     private double prix;
     private StatutEnchere statut;
 
-    public Enchere(String id, String titre, double prix, StatutEnchere statut) {
-        this.id = id;
+    public Enchere() {
+        this("", 0, StatutEnchere.EN_COURS);
+    }
+
+    public Enchere(String titre, double prix, StatutEnchere statut) {
+        this.id = UUID.randomUUID().toString();
         this.titre = titre;
         this.prix = prix;
         this.statut = statut;
+    }
+
+    public Enchere setProprietaire(String proprietaire) {
+        this.proprietaire = proprietaire;
+        return this;
+    }
+
+    public String getProprietaire() {
+        return proprietaire;
     }
 
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public Enchere setId(String id) {
         this.id = id;
+        return this;
     }
 
     public String getTitre() {
         return titre;
     }
 
-    public void setTitre(String titre) {
+    public Enchere setTitre(String titre) {
         this.titre = titre;
+        return this;
     }
 
     public double getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public Enchere setPrix(double prix) {
         this.prix = prix;
+        return this;
     }
 
     public StatutEnchere getStatut() {
         return statut;
     }
 
-    public void setStatut(StatutEnchere statut) {
+    public Enchere setStatut(StatutEnchere statut) {
         this.statut = statut;
+        return this;
     }
 
     @Override

@@ -2,14 +2,12 @@ package client;
 
 
 import com.google.gson.Gson;
-import model.User;
+import model.Enchere;
+import utils.StatutEnchere;
 
-import java.io.ByteArrayOutputStream;
-import java.io.ObjectOutputStream;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
-import java.util.Scanner;
 import java.util.concurrent.Future;
 
 public class AsyncIOClient {
@@ -19,9 +17,9 @@ public class AsyncIOClient {
         InetSocketAddress hostAddress = new InetSocketAddress("localhost", 8080);
         Future<Void> future = client.connect(hostAddress);
         future.get();
-        User momo = new User().setPseudo("Momo");
+        Enchere e = new Enchere().setTitre("Vodka").setPrix(120).setStatut(StatutEnchere.EN_COURS);
         Gson gson = new Gson();
-        String wrap = gson.toJson(momo);
+        String wrap = gson.toJson(e);
         System.out.println("wrap : "+wrap);
         ByteBuffer buffer = ByteBuffer.wrap(wrap.getBytes(), 0, wrap.getBytes().length);
         Future<Integer> writeResult = client.write(buffer);
