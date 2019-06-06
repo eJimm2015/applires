@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac276d02-797b-41dd-adca-6895e44dbfa2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/AsyncIOClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/AsyncIOClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/ClientGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ClientGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Enchere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Enchere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,11 +29,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            <state relative-caret-position="136">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -194,8 +194,8 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/VerbeHTTP.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/ServerClientRunnable.java" />
         <option value="$PROJECT_DIR$/src/main/java/client/AsyncIOClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/ClientGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java" />
       </list>
     </option>
   </component>
@@ -319,7 +319,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559846322116" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559847717455" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -438,7 +438,7 @@
       <workItem from="1559816521596" duration="326000" />
       <workItem from="1559817014426" duration="3093000" />
       <workItem from="1559825731733" duration="14674000" />
-      <workItem from="1559844740950" duration="1228000" />
+      <workItem from="1559844740950" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="1ere brique TCP du projet">
       <created>1558553598470</created>
@@ -454,17 +454,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559305303976</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finalisation du projet">
+      <created>1559846368053</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559846368053</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94815000" />
+    <option name="totallyTimeSpent" value="95614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.78474116" visible="true" weight="0.3267776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.78474116" visible="true" weight="0.3267776" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -475,7 +482,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934534" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -484,7 +491,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -552,7 +559,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1ere brique TCP du projet" />
     <MESSAGE value="Initialisation de la GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialisation de la GUI" />
+    <MESSAGE value="Finalisation du projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalisation du projet" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -925,17 +933,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="193" column="53" selection-start-line="193" selection-start-column="53" selection-end-line="193" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server/AsyncIOServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

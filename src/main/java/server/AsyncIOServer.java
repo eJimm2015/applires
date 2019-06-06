@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class AsyncIOServer {
 
-    public static final int DELAY = 60000;
+    public static final int DELAY = 20000;
     private Set<Enchere> encheres = new HashSet<>();
     private Set<String> participants = new HashSet<>();
     private ServerSocket serverSocket;
