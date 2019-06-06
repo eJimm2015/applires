@@ -8,28 +8,29 @@ import java.util.UUID;
 
 public class Enchere implements Serializable {
 
-    private String id, titre, proprietaire;
+    private String id, titre, auteur, gagnant = "";
     private double prix;
-    private StatutEnchere statut;
+    private StatutEnchere etat;
 
     public Enchere() {
         this("", 0, StatutEnchere.EN_COURS);
     }
 
-    public Enchere(String titre, double prix, StatutEnchere statut) {
+
+    public Enchere(String titre, double prix, StatutEnchere etat) {
         this.id = UUID.randomUUID().toString();
         this.titre = titre;
         this.prix = prix;
-        this.statut = statut;
+        this.etat = etat;
     }
 
-    public Enchere setProprietaire(String proprietaire) {
-        this.proprietaire = proprietaire;
+    public Enchere setAuteur(String auteur) {
+        this.auteur = auteur;
         return this;
     }
 
-    public String getProprietaire() {
-        return proprietaire;
+    public String getAuteur() {
+        return auteur;
     }
 
     public String getId() {
@@ -54,17 +55,28 @@ public class Enchere implements Serializable {
         return prix;
     }
 
+    public Enchere proposer(Enchere e){
+        boolean mieux = e.getPrix() > prix;
+        if(mieux) {
+            this.prix = e.getPrix();
+            this.gagnant = e.getGagnant();
+        }
+        return this;
+    }
+
     public Enchere setPrix(double prix) {
         this.prix = prix;
         return this;
     }
 
-    public StatutEnchere getStatut() {
-        return statut;
+
+
+    public StatutEnchere getEtat() {
+        return etat;
     }
 
-    public Enchere setStatut(StatutEnchere statut) {
-        this.statut = statut;
+    public Enchere setEtat(StatutEnchere etat) {
+        this.etat = etat;
         return this;
     }
 
@@ -81,13 +93,24 @@ public class Enchere implements Serializable {
         return Objects.hash(id);
     }
 
+    public String getGagnant() {
+        return gagnant;
+    }
+
+    public Enchere setGagnant(String gagnant) {
+        this.gagnant = gagnant;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Enchere{" +
                 "id='" + id + '\'' +
                 ", titre='" + titre + '\'' +
+                ", auteur='" + auteur + '\'' +
+                ", gagnant='" + gagnant + '\'' +
                 ", prix=" + prix +
-                ", statut=" + statut +
+                ", etat=" + etat +
                 '}';
     }
 }

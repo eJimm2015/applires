@@ -3,39 +3,49 @@ package client;
 
 import com.google.gson.Gson;
 import model.Enchere;
-import utils.StatutEnchere;
+import model.EnchereDTO;
+import utils.VerbeHTTP;
 
-import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
-import java.nio.channels.AsynchronousSocketChannel;
-import java.util.concurrent.Future;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 public class AsyncIOClient {
 
-    public static void main(String[] args) throws Exception {
-        AsynchronousSocketChannel client = AsynchronousSocketChannel.open();
-        InetSocketAddress hostAddress = new InetSocketAddress("localhost", 8080);
-        Future<Void> future = client.connect(hostAddress);
-        future.get();
-        Enchere e = new Enchere().setTitre("Vodka").setPrix(120).setStatut(StatutEnchere.EN_COURS);
-        Gson gson = new Gson();
-        String wrap = gson.toJson(e);
-        System.out.println("wrap : "+wrap);
-        ByteBuffer buffer = ByteBuffer.wrap(wrap.getBytes(), 0, wrap.getBytes().length);
-        Future<Integer> writeResult = client.write(buffer);
+    private Socket clientSocket;
+    private PrintWriter out;
+    private BufferedReader in;
+    private String id;
 
-        // do some computation
 
-        writeResult.get();
-        buffer.flip();
-        Future<Integer> readResult = client.read(buffer);
-
-        // do some computation
-
-        readResult.get();
-        String echo = new String(buffer.array()).trim();
-        buffer.clear();
-        System.out.println("AsyncIOServer "  + echo);
+    public void startConnection(String ip, int port) throws Exception {
+        clientSocket = new Socket(ip, port);
+        out = new PrintWriter(clientSocket.getOutputStream(), true);
+        in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }
+
+    public String sendMessage(String msg) throws Exception {
+        out.println(msg);
+        return in.readLine();
+    }
+
+    public void stopConnection() throws Exception {
+        in.close();
+        out.close();
+        clientSocket.close();
+    }
+
+    public AsyncIOClient(){
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
 }
 
